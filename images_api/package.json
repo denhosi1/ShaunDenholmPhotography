@@ -1,0 +1,24 @@
+{
+  "name": "shaundenholmphotography",
+  "version": "1.0.0",
+  "description": "Shaun Denholm Photography site created using express, node, mongo and angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denhosi1/ShaunDenholmPhotography.git"
+  },
+  "author": "Shaun Denholm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denhosi1/ShaunDenholmPhotography/issues"
+  },
+  "homepage": "https://github.com/denhosi1/ShaunDenholmPhotography#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7"
+  }
+}
