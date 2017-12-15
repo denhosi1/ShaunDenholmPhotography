@@ -1,1 +1,3 @@
-alert("Hi from app.js");
+$(document).ready(function(){
+
+});

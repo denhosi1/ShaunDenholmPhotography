@@ -1,9 +1,26 @@
 <head>
     <link rel="stylesheet" href="app.css" type="text/css"/>
+    <script
+        src="http://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
 </head>
 <body>
-    <h1>Index page</h1>
+    <header>
+        <h1>Gallery <span>IMAGES</span></h1>
+        <h2>A simple gallery image list app built with node</h2>
+    </header>
 
-    <p>This is where the gallery images will go</p>
+    <section class="form">
+        <input type="text" class="galleryImageInput" id="galleryImageTitle" placeholder="Insert your title here...">
+        <input type="text" class="galleryImageInput" id="galleryImageFilePath" placeholder="Insert your file path here...">
+        <input type="text" class="galleryImageInput" id="galleryImageLocation" placeholder="Insert your location here...">
+        <input type="text" class="galleryImageInput" id="galleryImageCategories" placeholder="Insert your categories here...">
+    </section>
+
+    <ul class="list">
+    </ul>
+
     <script type="text/javascript" src="app.js"></script>
 </body>
