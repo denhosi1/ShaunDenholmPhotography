@@ -58,12 +58,12 @@ header h2 {
     transition: all .3s ease;
 }
 
-task:hover {
+.task:hover {
     background: rgba(0, 0, 0, .02);
     cursor: pointer;
 }
 
-task:hover span {
+.task:hover span {
     opacity: 1;
 }
 
@@ -81,4 +81,14 @@ li span {
 
 li span:hover {
     color: #e74c3c;
+}
+
+.submit {
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
 }
