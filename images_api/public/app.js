@@ -5,6 +5,22 @@ $(document).ready(function(){
     $('#createButton').click(function(event) {
         createNewGalleryImage();
     })
+
+    $('.upload-btn').on('click', function (){
+        $('#upload-input').click();
+        $('.progress-bar').text('0%');
+        $('.progress-bar').width('0%');
+    });
+
+    $('#upload-input').on('change', function(){
+        
+          var files = $(this).get(0).files;
+        
+          if (files.length > 0){
+            alert(files.length + " files selected");
+          }
+        
+        });
 });
 
 function addGalleryImages(galleryImages) {

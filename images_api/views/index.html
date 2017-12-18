@@ -17,7 +17,11 @@
         <input type="text" class="galleryImageInput" id="galleryImageFilePath" placeholder="Insert your file path here...">
         <input type="text" class="galleryImageInput" id="galleryImageLocation" placeholder="Insert your location here...">
         <input type="text" class="galleryImageInput" id="galleryImageCategories" placeholder="Insert your categories here...">
-        <button id="createButton" class="submit" type="button">Create</button>
+        <input id="upload-input" type="file" name="uploads[]" multiple="multiple">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar"></div>
+          </div>
+        <button id="createButton" class="submit upload-btn" type="button">Create</button>
     </section>
 
     <ul class="list">

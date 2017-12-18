@@ -1,4 +1,6 @@
 var db = require("../models");
+var path = require('path'),
+fs = require('fs');
 
 exports.getGalleryImages = function(req, res) {
     db.GalleryImage.find()
