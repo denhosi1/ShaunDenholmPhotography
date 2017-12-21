@@ -6,21 +6,9 @@ $(document).ready(function(){
         createNewGalleryImage();
     })
 
-    $('.upload-btn').on('click', function (){
-        $('#upload-input').click();
-        $('.progress-bar').text('0%');
-        $('.progress-bar').width('0%');
-    });
-
-    $('#upload-input').on('change', function(){
-        
-          var files = $(this).get(0).files;
-        
-          if (files.length > 0){
-            alert(files.length + " files selected");
-          }
-        
-        });
+    $('.list').on("click", "span",function() {
+        deleteGalleryImage($(this).parent());
+    })
 });
 
 function addGalleryImages(galleryImages) {
@@ -52,8 +40,21 @@ function createNewGalleryImage() {
 
 function addGalleryImage(galleryImage){
     var newGalleryImage = $('<li class="task">' +  galleryImage.title + '<span>X</span></li>');
+    newGalleryImage.data('id', galleryImage._id);
     if(newGalleryImage.complete) {
         newGalleryImage.addClass("done");
     }
     $('.list').append(newGalleryImage);
+}
+
+function deleteGalleryImage(item) {
+    var clickedItemId = item.data('id');
+    var deleteUrl = "/api/galleryImages/" + clickedItemId;
+    $.ajax({
+        method: 'DELETE',
+        url: deleteUrl
+    })
+    .then(function(data) {
+        item.remove();
+    });
 }
